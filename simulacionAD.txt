@@ -1,0 +1,82 @@
+### **Examen de MySQL: CRUD y Gestión de Bases de Datos**
+
+**Enunciado del Examen:**
+
+En este examen, se te pide interactuar con una base de datos MySQL para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una tabla de usuarios. A continuación se te proporcionará la estructura de la base de datos, los datos iniciales y las operaciones que deberás realizar.
+
+**Base de Datos: `empresa`**
+
+La base de datos `empresa` se utiliza para gestionar información sobre empleados dentro de una empresa. Tendrás que realizar una serie de consultas SQL para modificar y consultar esta base de datos.
+
+**Estructura de la Base de Datos:**
+
+```sql
+CREATE DATABASE empresa;
+
+USE empresa;
+
+CREATE TABLE empleados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    fecha_contratacion DATE NOT NULL,
+    salario DECIMAL(10,2) NOT NULL
+);
+```
+
+**Datos Iniciales en la Tabla `empleados`:**
+
+```sql
+INSERT INTO empleados (nombre, apellidos, email, fecha_contratacion, salario)
+VALUES
+    ('Juan', 'Pérez', 'juan.perez@empresa.com', '2021-03-15', 3000.00),
+    ('Ana', 'Gómez', 'ana.gomez@empresa.com', '2020-06-01', 2800.50),
+    ('Carlos', 'Sánchez', 'carlos.sanchez@empresa.com', '2019-02-20', 3500.00),
+    ('María', 'López', 'maria.lopez@empresa.com', '2022-09-12', 2900.75),
+    ('Luis', 'Ramírez', 'luis.ramirez@empresa.com', '2021-12-25', 3100.20);
+```
+
+**Tareas a Realizar:**
+
+1. **Crear un nuevo empleado:**
+   - Inserta un nuevo empleado con los siguientes datos:
+     - Nombre: Pedro
+     - Apellidos: Martínez
+     - Email: pedro.martinez@empresa.com
+     - Fecha de contratación: 2024-01-10
+     - Salario: 3200.00
+
+2. **Leer los datos de todos los empleados:**
+   - Realiza una consulta SQL que muestre todos los empleados (todos los campos de la tabla `empleados`).
+
+3. **Actualizar un salario:**
+   - Actualiza el salario del empleado con `id = 2` (Ana Gómez) a 3100.00.
+
+4. **Eliminar un empleado:**
+   - Elimina al empleado con `id = 5` (Luis Ramírez).
+
+5. **Leer datos filtrados:**
+   - Realiza una consulta SQL que muestre solo los empleados cuyo salario sea mayor a 3000.00.
+
+6. **Contar empleados:**
+   - Realiza una consulta SQL que cuente cuántos empleados hay en la tabla `empleados`.
+
+**Puntos de Evaluación:**
+
+- La precisión de las consultas.
+- La correcta manipulación de los datos de la tabla.
+- La capacidad para realizar un CRUD básico en MySQL.
+- El uso adecuado de las sentencias SQL `INSERT`, `SELECT`, `UPDATE`, `DELETE` y las cláusulas correspondientes.
+
+**Nota:**
+- Cada tarea debe realizarse utilizando solo una consulta SQL por operación, salvo que se indique lo contrario.
+
+**Instrucciones:**
+1. Crea una base de datos llamada `empresa` en tu entorno MySQL.
+2. Ejecuta los comandos de creación de tabla y datos iniciales.
+3. Realiza las operaciones CRUD indicadas utilizando las consultas proporcionadas.
+
+---
+
+Este examen está diseñado para evaluar tu capacidad para interactuar con bases de datos MySQL, realizar operaciones de manipulación de datos y gestionar una base de datos con las herramientas proporcionadas.
